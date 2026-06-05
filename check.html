@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Checker | dr4g0n-ch3ck</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <nav class="navbar">
+    <a class="brand" href="index.html"><span>dr4g0n</span>-ch3ck</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="check.html">Checker</a>
+    </div>
+  </nav>
+
+  <main class="checker-layout reveal">
+    <section class="checker-panel glass">
+      <p class="tag">Live Analyzer</p>
+      <h1>Password Security Check</h1>
+      <label for="passwordInput">Enter password</label>
+      <div class="input-row">
+        <input id="passwordInput" type="password" placeholder="Type a password to analyze..." autocomplete="off" />
+        <button id="togglePassword" class="mini-btn">Show</button>
+      </div>
+      <div class="meter"><div id="meterFill"></div></div>
+      <div class="score-line">
+        <span id="scoreText">Score: 0 / 100</span>
+        <strong id="levelText">Waiting</strong>
+      </div>
+
+      <div class="metrics">
+        <div><span>Entropy</span><strong id="entropyText">0 bits</strong></div>
+        <div><span>Length</span><strong id="lengthText">0</strong></div>
+        <div><span>Character Set</span><strong id="charsetText">0</strong></div>
+      </div>
+
+      <button id="generateBtn" class="btn primary wide">Generate Strong Password</button>
+      <button id="copyBtn" class="btn ghost wide">Copy Password</button>
+    </section>
+
+    <section class="report-panel glass">
+      <h2>Crack-Time Estimate</h2>
+      <div class="time-grid">
+        <div><span>Online Attack</span><strong id="onlineTime">—</strong></div>
+        <div><span>Fast Hash</span><strong id="fastTime">—</strong></div>
+        <div><span>GPU Rig</span><strong id="gpuTime">—</strong></div>
+      </div>
+
+      <h2>Security Checklist</h2>
+      <div id="checklist" class="audit-list"></div>
+
+      <h2>Recommendations</h2>
+      <ul id="tips" class="tips"><li>Start typing to get professional feedback.</li></ul>
+    </section>
+  </main>
+
+  <section class="section reveal">
+    <h2>Cyber Security Notes</h2>
+    <p class="note">This project estimates password strength locally in your browser. Do not enter real passwords from your personal accounts into any online tool unless you fully trust it.</p>
+  </section>
+
+  <footer>dr4g0n-ch3ck • Static GitHub Website</footer>
+  <script src="assets/js/checker.js"></script>
+</body>
+</html>
